@@ -1,4 +1,4 @@
-# javascript-frameworks-backend
+# Example Bun Backend
 
 To install dependencies:
 
