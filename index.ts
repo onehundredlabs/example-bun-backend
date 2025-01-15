@@ -16,7 +16,7 @@ serve({
     if (method === "GET" && pathname === "/api/invoices") {
       console.log("GET: /api/invoices");
 
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await new Promise((resolve) => setTimeout(resolve, 1000));
 
       return Response.json(mockInvoices);
     }
@@ -24,7 +24,7 @@ serve({
     if (method === "GET" && pathname === "/api/invoices/summary") {
       console.log("GET: /api/invoices/summary");
 
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await new Promise((resolve) => setTimeout(resolve, 1000));
 
       return Response.json(mockInvoicesSummary);
     }
@@ -37,7 +37,7 @@ serve({
       if (id) {
         console.log(`GET: /api/invoices/${id}`);
 
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 1000));
 
         const dataById = mockInvoicesWithItems.find(
           (invoice) => invoice.invoiceId === id
@@ -58,7 +58,7 @@ serve({
       if (invoiceId && itemId) {
         console.log(`DELETE: /api/invoices/${invoiceId}/items/${itemId}`);
 
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 1000));
 
         const invoice = mockInvoicesWithItems.find(
           (invoice) => invoice.invoiceId === invoiceId
